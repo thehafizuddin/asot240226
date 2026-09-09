@@ -1,277 +1,418 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>ASOT240226 - School of Trade</title>
-  <meta name="description" content="STOP CHASING PIPS. START CATCHING THE 900PIPS RIDES WITH SOT. 150,000+ Active Members, Daily Trade Ideas, 100% FREE Access.">
+  <title>SOT — Stop Chasing Pips. Start Catching the 900-Pip Rides</title>
+  <meta name="description" content="Join 150,000+ active members. Daily trade ideas, market updates, consistent 200-500 pips, risk management tips. 100% FREE access. Only 250 free seats remain.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     :root {
-      --sot-purple: #55205E;
-      --sot-yellow: #FED524;
-      --sot-red: #FF0000;
+      --bg: #0A0A0A;
+      --bg-2: #0F0F0F;
+      --surface: #161616;
+      --surface-2: #1C1C1C;
+      --border: #2A2A2A;
+      --gold: #D4AF37;
+      --gold-2: #E8C96A;
+      --gold-dark: #B8860B;
+      --navy: #101B3E;
+      --text: #F5F1E6;
+      --muted: #8A8678;
+      --red: #FF4D4D;
+      --green: #3DFF00;
+      --radius: 14px;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: "Montserrat", Sans-serif;
-      background-color: #1a0f1e;
-    }
-
-    /* Hero section */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 90vh;
-      padding: 100px 15px 0;
-      background-image: url("assets/sampul_bg.jpg");
-      background-position: top center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    @media (min-width: 1025px) {
-      .hero { background-attachment: fixed; }
-    }
-
-    .hero-inner {
-      width: 100%;
-      max-width: 600px;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    /* Title box */
-    .title-box {
-      background-color: var(--sot-purple);
-      margin: 10px;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      text-align: center;
-      align-self: stretch;
-      animation: blinkme 2s infinite;
-    }
-    .title-box a {
-      color: #fff;
-      text-decoration: none;
-    }
-    .title-box h1 {
-      font-family: "Montserrat", Sans-serif;
-      font-size: 20px;
-      font-weight: 400;
-      color: #fff;
-    }
-
-    @keyframes blinkme {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.65; }
-    }
-
-    /* Image */
-    .hero-img {
-      margin: 10px;
-      text-align: center;
-    }
-    .hero-img img {
-      width: 600px;
-      max-width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      display: block;
-      margin: 0 auto;
-    }
-
-    /* Description card */
-    .desc-card {
-      background-color: #fff;
-      margin: 10px;
-      padding: 15px;
-      text-align: center;
-      font-family: "Montserrat", Sans-serif;
-      font-size: 18px;
-      font-weight: 400;
-      color: #000;
-      flex: 1;
-    }
-    .desc-card p { line-height: 1.5; }
-
-    /* Urgency card */
-    .urgency-box {
-      background-color: #fff;
-      margin: 10px;
-      padding: 15px;
-      text-align: center;
-      align-self: stretch;
-    }
-    .urgency-box h2 {
-      font-family: "Montserrat", Sans-serif;
-      font-size: 18px;
-      font-weight: 400;
-      color: #000;
-    }
-
-    /* CTA button */
-    .cta-wrap {
-      margin: 10px;
-      text-align: center;
-    }
-    .cta-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-      background-color: var(--sot-red);
-      color: #fff;
-      font-family: "Montserrat", Sans-serif;
-      font-weight: 400;
-      border: 1px solid #fff;
-      border-radius: 3px;
-      padding: 14px 28px;
-      text-decoration: none;
-      font-size: 16px;
-      width: 100%;
-      animation: blinkme 2s infinite;
-      transition: background-color .2s;
-    }
-    .cta-btn svg { width: 22px; height: 22px; fill: #fff; }
-    .cta-btn:hover { background-color: #e00000; }
-
-    /* Divider */
-    .divider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 10px;
-    }
-    .divider-line {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-top: 2px solid #fff;
-      position: relative;
-    }
-    .divider-line svg {
-      fill: #fff;
-      background: transparent;
-      width: 24px;
-      height: 24px;
-      position: absolute;
-      background: #1a0f1e;
-    }
-
-    /* Footer */
-    .footer-note {
-      text-align: center;
-      font-family: "Montserrat", Sans-serif;
-      font-size: 11px;
-      font-weight: 400;
-      color: #fff;
-      padding: 0 10px 20px;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
       line-height: 1.6;
+      overflow-x: hidden;
     }
-
-    /* Scroll to top */
-    .scroll-top {
-      position: fixed;
-      right: 15px;
-      bottom: 15px;
-      cursor: pointer;
-      opacity: 0;
-      transition: opacity .3s;
-      z-index: 10;
+    .mi {
+      font-family: 'Material Symbols Rounded';
+      font-weight: normal; font-style: normal; font-size: 24px;
+      display: inline-flex; align-items: center; justify-content: center;
+      line-height: 1; letter-spacing: normal; text-transform: none;
+      white-space: nowrap; word-wrap: normal; direction: ltr;
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
     }
-    .scroll-top.show { opacity: 1; }
+    .mi.fill { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
 
-    /* Mobile */
-    @media (max-width: 767px) {
-      .hero {
-        min-height: 45vh;
-        padding: 15px 15px 0;
-      }
-      .title-box { margin: 5px; }
-      .title-box h1 { font-size: 13px; line-height: 1.3; }
-      .hero-img { margin: 5px; }
-      .hero-img img { width: 100%; }
-      .desc-card { font-size: 13px; line-height: 1.3; width: 100%; margin: 5px; padding: 10px; }
-      .urgency-box { width: 100%; margin: 5px; padding: 10px; }
-      .urgency-box h2 { font-size: 13px; line-height: 1.3; }
-      .cta-wrap { margin: 5px; }
-      .cta-btn { font-size: 16px; padding: 13px 20px; }
-      .footer-note { font-size: 9px; }
+    /* Ticker */
+    .ticker {
+      background: var(--bg-2); border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; overflow-x: auto; white-space: nowrap;
+      scrollbar-width: none; padding: 10px 0;
+    }
+    .ticker::-webkit-scrollbar { display: none; }
+    .ticker-item { display: flex; align-items: center; gap: 8px; padding: 0 18px; font-size: 13px; font-weight: 600; color: var(--gold-2); }
+    .ticker-item .pair { color: var(--text); font-weight: 700; }
+    .ticker-item .mi { font-size: 15px; color: var(--gold); }
+
+    /* Nav */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 40px;
+      background: rgba(10,10,10,.75); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; letter-spacing: .5px; }
+    .nav-logo img { height: 36px; border-radius: 6px; }
+    .nav-logo .mi { color: var(--gold); font-size: 24px; }
+    .nav-logo span b { color: var(--gold); }
+    .nav-cta { text-decoration: none; color: #000; background: var(--gold); padding: 10px 20px; border-radius: 10px; font-weight: 700; font-size: 14px; display: inline-flex; align-items: center; gap: 6px; transition: filter .15s; }
+    .nav-cta:hover { filter: brightness(1.1); color: #000; }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 120px 20px 30px; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 30%, rgba(212,175,55,.12), transparent 55%),
+        radial-gradient(ellipse at 80% 70%, rgba(212,175,55,.07), transparent 50%);
+    }
+    .hero-chart { position: absolute; inset: 0; opacity: .1; pointer-events: none; }
+    .hero-content { position: relative; z-index: 2; max-width: 680px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(212,175,55,.08); border: 1px solid var(--gold);
+      color: var(--gold-2); padding: 6px 16px; border-radius: 999px;
+      font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+    .eyebrow::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
+    .hero-logo { margin-bottom: 24px; }
+    .hero-logo img { width: 160px; height: 160px; object-fit: cover; border-radius: 24px; box-shadow: 0 20px 60px rgba(212,175,55,.3); }
+    .hero h1 { font-size: clamp(34px, 6vw, 62px); font-weight: 900; line-height: 1.05; letter-spacing: -1px; margin-bottom: 16px; }
+    .hero h1 .gold { color: var(--gold); }
+    .hero .sub { font-size: 17px; color: var(--muted); margin: 0 0 28px; max-width: 620px; text-align: center; }
+    .hero .sub b { color: var(--text); }
+
+    .check-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 26px; text-align: left; }
+    .check-row {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 14px 16px;
+    }
+    .check-tick { flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%; background: var(--gold); color: #0A0A0A; display: flex; align-items: center; justify-content: center; }
+    .check-tick .mi { font-size: 16px; font-variation-settings: 'FILL' 1; }
+    .check-text { font-weight: 500; font-size: 15px; color: var(--text); }
+    .check-text b { color: var(--gold-2); }
+
+    .hero-cta {
+      text-decoration: none; color: #000; background: var(--gold);
+      padding: 18px 38px; border-radius: 14px; font-weight: 800; font-size: 17px;
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      box-shadow: 0 12px 40px rgba(212,175,55,.28); transition: filter .2s, transform .2s;
+      width: 100%;
+    }
+    .hero-cta:hover { filter: brightness(1.08); transform: translateY(-1px); color: #000; }
+    .hero-cta .mi { font-size: 22px; }
+    .cta-hint { margin-top: 14px; text-align: center; color: var(--muted); font-size: 14px; }
+    .cta-hint b { color: var(--text); }
+
+    .urgency {
+      margin-top: 22px; text-align: center; padding: 16px 20px;
+      border-left: 4px solid var(--gold); background: rgba(212,175,55,.05);
+      border-radius: 0 12px 12px 0;
+    }
+    .urgency .quote { font-size: 16px; font-weight: 700; line-height: 1.4; color: var(--text); }
+    .urgency .quote em { font-style: normal; color: var(--gold-2); }
+
+    /* Section */
+    .section { border-top: 1px solid var(--border); padding: 80px 20px; }
+    .section-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--gold-2); font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; margin-bottom: 12px;
+    }
+    .section-label .mi { font-size: 18px; }
+    .sec-h2 { font-size: clamp(28px, 4vw, 44px); font-weight: 800; line-height: 1.12; margin-bottom: 12px; }
+    .sec-h2 .gold { color: var(--gold); }
+    .sec-sub { color: var(--muted); font-size: 16px; max-width: 620px; }
+    .container-tight { max-width: 1080px; margin: 0 auto; }
+
+    .stat-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 26px; text-align: center; height: 100%;
+      transition: border-color .2s, transform .2s;
+    }
+    .stat-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+    .stat-num { font-size: clamp(32px, 5vw, 48px); font-weight: 900; color: var(--gold); line-height: 1.1; }
+    .stat-lbl { color: var(--muted); font-size: 14px; margin-top: 6px; }
+
+    .feature-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px; height: 100%;
+      transition: border-color .2s, transform .2s;
+    }
+    .feature-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+    .feature-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: rgba(212,175,55,.1); border: 1px solid var(--gold);
+      color: var(--gold); display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
+    }
+    .feature-icon .mi { font-size: 30px; }
+    .feature-card h4 { font-weight: 700; font-size: 19px; margin-bottom: 8px; }
+    .feature-card p { color: var(--muted); font-size: 14.5px; margin: 0; }
+
+    /* CTA panel */
+    .cta-panel {
+      background: linear-gradient(135deg, rgba(212,175,55,.12), rgba(212,175,55,.03));
+      border: 1px solid var(--gold); border-radius: 20px; padding: 48px; text-align: center;
+    }
+    .cta-panel h2 { font-size: clamp(26px, 4vw, 40px); font-weight: 800; margin-bottom: 20px; }
+    .cta-panel p { color: var(--muted); max-width: 520px; margin: 0 auto 26px; }
+
+    /* Sticky bottom CTA */
+    .sticky-cta {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 99;
+      background: rgba(10,10,10,.9); backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border); padding: 12px 16px;
+      text-align: center; display: none;
+    }
+    .sticky-cta.show { display: block; }
+    .sticky-cta a {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      color: #000; background: var(--gold); padding: 12px 26px; border-radius: 12px;
+      font-weight: 800; font-size: 15px; text-decoration: none; width: 100%; max-width: 400px;
+    }
+    .sticky-cta a .mi { font-size: 20px; }
+
+    /* Disclaimer */
+    .disclaimer { padding: 26px 20px 60px; border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; line-height: 1.7; max-width: 680px; margin: 0 auto; text-align: left; }
+    .disclaimer b { color: var(--text); font-weight: 700; }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .nav { padding: 8px 16px; }
+      .nav-logo { font-size: 15px; }
+      .nav-logo img { height: 26px; }
+      .nav-cta { padding: 7px 13px; font-size: 11px; }
+      .ticker { padding: 7px 0; }
+      .hero { padding-top: 32px; padding-bottom: 6px; min-height: auto; }
+      .hero-content { max-width: 100%; }
+      .hero-logo { margin-bottom: 16px; }
+      .hero-logo img { width: 100px; height: 100px; border-radius: 18px; }
+      .hero h1 { font-size: clamp(28px, 8vw, 36px); margin-bottom: 10px; }
+      .hero .sub { font-size: 13px; margin-bottom: 16px; }
+      .eyebrow { font-size: 9.5px; padding: 3px 11px; margin-bottom: 13px; }
+      .check-list { gap: 6px; margin-bottom: 14px; }
+      .check-row { padding: 8px 10px; gap: 8px; }
+      .check-tick { width: 18px; height: 18px; }
+      .check-tick .mi { font-size: 12px; }
+      .check-text { font-size: 12px; }
+      .hero-cta { padding: 13px 20px; font-size: 15px; }
+      .hero-cta .mi { font-size: 20px; }
+      .cta-hint { font-size: 11px; margin-top: 9px; }
+      .urgency { margin-top: 14px; padding: 12px 13px; }
+      .urgency .quote { font-size: 13px; }
+      .section { padding: 48px 16px; }
+      .disclaimer { font-size: 10px; padding: 14px 16px 54px; }
+      .stat-card { padding: 18px; }
+      .feature-card { padding: 22px; }
+      .cta-panel { padding: 30px 18px; }
     }
   </style>
 </head>
 <body>
 
-  <section class="hero">
-    <div class="hero-inner">
+  <!-- Ticker -->
+  <div class="ticker">
+    <div class="ticker-item"><span class="mi">arrow_upward</span><span class="pair">XAU/USD</span> 2,520.27</div>
+    <div class="ticker-item"><span class="mi">arrow_upward</span><span class="pair">GBP/USD</span> 1.271</div>
+    <div class="ticker-item"><span class="mi">arrow_upward</span><span class="pair">USD/JPY</span> 144.52</div>
+    <div class="ticker-item"><span class="mi">arrow_downward</span><span class="pair">EUR/USD</span> 1.089</div>
+    <div class="ticker-item"><span class="mi">arrow_upward</span><span class="pair">GBP/JPY</span> 183.64</div>
+  </div>
 
-      <div class="title-box">
-        <h1>
-          <a href="https://t.me/+7hR47jlUJ1s1ZjZl">STOP CHASING PIPS. START CATCHING THE 900PIPS RIDES WITH SOT 🎯</a>
-        </h1>
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-logo">
+      <img src="assets/sot.jpg" alt="School of Trade">
+      <span>School of <b>Trade</b></span>
+    </div>
+    <a class="nav-cta" href="https://t.me/+7hR47jlUJ1s1ZjZl" target="_blank" rel="noreferrer"><span class="mi">send</span> Join Free</a>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <svg class="hero-chart" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <g></g>
+    </svg>
+    <div class="hero-content">
+      <div class="hero-logo">
+        <img src="assets/sot.jpg" alt="School of Trade logo">
       </div>
-
-      <div class="hero-img">
-        <img src="assets/sot.jpg" alt="School of Trade" width="1000" height="700">
+      <div class="eyebrow">Free Telegram Community</div>
+      <h1>Stop Chasing Pips. Start Catching the <span class="gold">900-Pip Rides</span></h1>
+      <p class="sub">You need an <b>execution framework</b> that tells you <b>why</b> the market is moving. Daily trade ideas, market updates &amp; risk management — <b>100% free</b>.</p>
+      <div class="check-list">
+        <div class="check-row"><span class="check-tick"><span class="mi">check</span></span><span class="check-text"><b>150,000+</b> active members</span></div>
+        <div class="check-row"><span class="check-tick"><span class="mi">check</span></span><span class="check-text">Daily trade ideas &amp; <b>market updates</b></span></div>
+        <div class="check-row"><span class="check-tick"><span class="mi">check</span></span><span class="check-text">Consistent <b>200 – 500 pips</b> daily</span></div>
+        <div class="check-row"><span class="check-tick"><span class="mi">check</span></span><span class="check-text">Risk <b>management</b> tips</span></div>
+        <div class="check-row"><span class="check-tick"><span class="mi">check</span></span><span class="check-text"><b>100% free</b> access</span></div>
       </div>
+      <a class="hero-cta" href="https://t.me/+7hR47jlUJ1s1ZjZl" target="_blank" rel="noreferrer"><span>Join Free Now</span><span class="mi">arrow_forward</span></a>
+      <p class="cta-hint">Free channel on Telegram — <b>don't start another month of almost making it.</b></p>
 
-      <div class="desc-card">
-        <p>You Need an Execution Framework That Tells Why The Market is Moving.</p>
-        <p>
-          ✅ 150,000+ Active Members<br>
-          ✅ Daily Trade Ideas &amp; Market Updates<br>
-          ✅ Consistent Daily 200 – 500 pips<br>
-          ✅ Risk Management Tips<br>
-          ✅ 100% FREE Access
-        </p>
+      <div class="urgency">
+        <div class="quote">🔥 Only <em>250 free seats</em> remain for March intake 🔥</div>
       </div>
+    </div>
+  </header>
 
-      <div class="urgency-box">
-        <h2>🔥 Only 250 free seats remain for March intake. Don't start another month of almost making it 🔥</h2>
+  <!-- Social proof / stats -->
+  <section class="section">
+    <div class="container-tight">
+      <div class="row g-3">
+        <div class="col-6 col-md-3 reveal"><div class="stat-card"><div class="stat-num" data-count="150" data-suffix="K+">0</div><div class="stat-lbl">Active Members</div></div></div>
+        <div class="col-6 col-md-3 reveal"><div class="stat-card"><div class="stat-num" data-count="900" data-suffix="pips">0</div><div class="stat-lbl">Target Rides</div></div></div>
+        <div class="col-6 col-md-3 reveal"><div class="stat-card"><div class="stat-num" data-count="500" data-suffix="pips">0</div><div class="stat-lbl">Daily Structure</div></div></div>
+        <div class="col-6 col-md-3 reveal"><div class="stat-card"><div class="stat-num" data-count="250" data-suffix="">0</div><div class="stat-lbl">Free Seats Left</div></div></div>
       </div>
-
-      <div class="cta-wrap">
-        <a class="cta-btn" href="https://t.me/+7hR47jlUJ1s1ZjZl">
-          <svg aria-hidden="true" viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"></path></svg>
-          <span>LAST CALL HERE 👈</span>
-        </a>
-      </div>
-
-      <div class="divider">
-        <div class="divider-line">
-          <svg aria-hidden="true" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M471.1 96C405 96 353.3 137.3 320 174.6 286.7 137.3 235 96 168.9 96 75.8 96 0 167.8 0 256s75.8 160 168.9 160c66.1 0 117.8-41.3 151.1-78.6 33.3 37.3 85 78.6 151.1 78.6 93.1 0 168.9-71.8 168.9-160S564.2 96 471.1 96zM168.9 320c-40.2 0-72.9-28.7-72.9-64s32.7-64 72.9-64c38.2 0 73.4 36.1 94 64-20.4 27.6-55.9 64-94 64zm302.2 0c-38.2 0-73.4-36.1-94-64 20.4-27.6 55.9-64 94-64 40.2 0 72.9 28.7 72.9 64s-32.7 64-72.9 64z"></path></svg>
-        </div>
-      </div>
-
-      <div class="footer-note">
-        <p>PLEASE NOTE: This site is not affiliated with Facebook or any Facebook entity. Once you leave Facebook, it's not their responsibility, it's our website's. We make every effort to clearly state and show all product proofs and use actual results.</p>
-      </div>
-
     </div>
   </section>
 
-  <div class="scroll-top" id="scrollTop" aria-label="Scroll to Top">
-    <svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" width="26" height="16" viewBox="0 0 26 16"><path d="M12.5,3.193l12.5,12.5l-2.5,2.5l-10-10l-10,10L0,15.693L12.5,3.193z" fill="#fff"/></svg>
+  <!-- Why SOT -->
+  <section class="section">
+    <div class="container-tight">
+      <div class="reveal">
+        <div class="section-label"><span class="mi">bolt</span> Why School of Trade</div>
+        <h2 class="sec-h2">An Execution Framework That <span class="gold">Tells You Why</span></h2>
+        <p class="sec-sub mb-4">Stop trading on emotion. Get structure, confirmation and discipline — every single day.</p>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-4 reveal">
+          <div class="feature-card">
+            <div class="feature-icon"><span class="mi">candlestick_chart</span></div>
+            <h4>Daily Trade Ideas</h4>
+            <p>Structured entries with clear confirmation — know <b>why</b> the market is moving before you act.</p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="feature-card">
+            <div class="feature-icon"><span class="mi">monitoring</span></div>
+            <h4>Market Updates</h4>
+            <p>Real-time updates on Forex &amp; metals so you're always on the right side of the move.</p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="feature-card">
+            <div class="feature-icon"><span class="mi">shield</span></div>
+            <h4>Risk Management</h4>
+            <p>Protect your capital with clear risk rules — the difference between surviving and blowing up.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section">
+    <div class="container-tight">
+      <div class="cta-panel reveal">
+        <div class="eyebrow" style="margin-bottom:16px;">Limited Seats</div>
+        <h2>Only <span style="color:var(--gold);">250 Free Seats</span> Remain.</h2>
+        <p>Don't start another month of almost making it. Get structure, discipline &amp; a real framework — <b>100% free</b>.</p>
+        <a class="hero-cta" href="https://t.me/+7hR47jlUJ1s1ZjZl" target="_blank" rel="noreferrer" style="max-width:400px; margin:0 auto;"><span>Last Call Here</span><span class="mi">arrow_forward</span></a>
+        <p class="cta-hint mt-3"><b>100% free</b> — no cost, no risk. Join before it's gone.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  <div class="disclaimer">
+    <p><b>Disclaimer</b> — <b>PLEASE NOTE:</b> This site is not affiliated with Facebook or any Facebook entity. Once you leave Facebook, it's not their responsibility, it's our website's. We make every effort to clearly state and show all product proofs and use actual results.</p>
   </div>
 
-  <script>
-    // Scroll to top button
-    var st = document.getElementById('scrollTop');
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 300) st.classList.add('show');
-      else st.classList.remove('show');
-    });
-    st.addEventListener('click', function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
+  <!-- Sticky bottom CTA -->
+  <div class="sticky-cta" id="stickyCta">
+    <a href="https://t.me/+7hR47jlUJ1s1ZjZl" target="_blank" rel="noreferrer"><span class="mi">send</span> Join Free — 250 Seats Left</a>
+  </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script>
+    // Animated candlestick background
+    (function () {
+      const svg = document.querySelector('.hero-chart g');
+      let candles = '';
+      for (let i = 0; i < 30; i++) {
+        const up = Math.sin(i * 1.3) > 0;
+        const h = 20 + Math.abs(Math.sin(i * 0.9)) * 60;
+        const top = 50 - h / 2 + Math.sin(i) * 12;
+        const left = i * 3.2 + 4;
+        const c = up ? 'rgba(212,175,55,.9)' : 'rgba(200,60,60,.9)';
+        candles += `<rect x="${left}" y="${top}" width="1.4" height="${h}" rx=".3" fill="${c}"/>
+          <rect x="${left + 0.55}" y="${top - 4}" width="0.3" height="${h + 8}" fill="${up ? 'rgba(212,175,55,.7)' : 'rgba(200,60,60,.7)'}"/>`;
+      }
+      if (svg) svg.innerHTML = candles;
+    })();
+
+    // Sticky CTA on scroll (show when past hero)
+    const sticky = document.getElementById('stickyCta');
+    function checkSticky() {
+      if (window.scrollY > window.innerHeight * 0.6) sticky.classList.add('show');
+      else sticky.classList.remove('show');
+    }
+    window.addEventListener('scroll', checkSticky);
+    checkSticky();
+
+    // Count-up
+    function animateCount(el) {
+      const target = +el.dataset.count;
+      const suffix = el.dataset.suffix || '';
+      const dur = 1500;
+      const start = performance.now();
+      function tick(now) {
+        const p = Math.min((now - start) / dur, 1);
+        el.textContent = Math.floor(target * p) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+        else el.textContent = target + suffix;
+      }
+      requestAnimationFrame(tick);
+    }
+
+    // Scroll reveal + counters
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          e.target.querySelectorAll('[data-count]').forEach(animateCount);
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Fallback reveal
+    setTimeout(() => {
+      document.querySelectorAll('.reveal').forEach(el => {
+        el.classList.add('in');
+        el.querySelectorAll('[data-count]').forEach(c => {
+          if (c.textContent === '0' || c.textContent === '0K+' || c.textContent === '0pips') animateCount(c);
+        });
+      });
+    }, 900);
+  </script>
 </body>
 </html>
