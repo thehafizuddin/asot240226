@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>ASOT240226 - School of Trade</title>
+  <meta name="description" content="STOP CHASING PIPS. START CATCHING THE 900PIPS RIDES WITH SOT. 150,000+ Active Members, Daily Trade Ideas, 100% FREE Access.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sot-purple: #55205E;
+      --sot-yellow: #FED524;
+      --sot-red: #FF0000;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Montserrat", Sans-serif;
+      background-color: #1a0f1e;
+    }
+
+    /* Hero section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 90vh;
+      padding: 100px 15px 0;
+      background-image: url("assets/sampul_bg.jpg");
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    @media (min-width: 1025px) {
+      .hero { background-attachment: fixed; }
+    }
+
+    .hero-inner {
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    /* Title box */
+    .title-box {
+      background-color: var(--sot-purple);
+      margin: 10px;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      text-align: center;
+      align-self: stretch;
+      animation: blinkme 2s infinite;
+    }
+    .title-box a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .title-box h1 {
+      font-family: "Montserrat", Sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    @keyframes blinkme {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.65; }
+    }
+
+    /* Image */
+    .hero-img {
+      margin: 10px;
+      text-align: center;
+    }
+    .hero-img img {
+      width: 600px;
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Description card */
+    .desc-card {
+      background-color: #fff;
+      margin: 10px;
+      padding: 15px;
+      text-align: center;
+      font-family: "Montserrat", Sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: #000;
+      flex: 1;
+    }
+    .desc-card p { line-height: 1.5; }
+
+    /* Urgency card */
+    .urgency-box {
+      background-color: #fff;
+      margin: 10px;
+      padding: 15px;
+      text-align: center;
+      align-self: stretch;
+    }
+    .urgency-box h2 {
+      font-family: "Montserrat", Sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: #000;
+    }
+
+    /* CTA button */
+    .cta-wrap {
+      margin: 10px;
+      text-align: center;
+    }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      background-color: var(--sot-red);
+      color: #fff;
+      font-family: "Montserrat", Sans-serif;
+      font-weight: 400;
+      border: 1px solid #fff;
+      border-radius: 3px;
+      padding: 14px 28px;
+      text-decoration: none;
+      font-size: 16px;
+      width: 100%;
+      animation: blinkme 2s infinite;
+      transition: background-color .2s;
+    }
+    .cta-btn svg { width: 22px; height: 22px; fill: #fff; }
+    .cta-btn:hover { background-color: #e00000; }
+
+    /* Divider */
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+    }
+    .divider-line {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: 2px solid #fff;
+      position: relative;
+    }
+    .divider-line svg {
+      fill: #fff;
+      background: transparent;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      background: #1a0f1e;
+    }
+
+    /* Footer */
+    .footer-note {
+      text-align: center;
+      font-family: "Montserrat", Sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      color: #fff;
+      padding: 0 10px 20px;
+      line-height: 1.6;
+    }
+
+    /* Scroll to top */
+    .scroll-top {
+      position: fixed;
+      right: 15px;
+      bottom: 15px;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity .3s;
+      z-index: 10;
+    }
+    .scroll-top.show { opacity: 1; }
+
+    /* Mobile */
+    @media (max-width: 767px) {
+      .hero {
+        min-height: 45vh;
+        padding: 15px 15px 0;
+      }
+      .title-box { margin: 5px; }
+      .title-box h1 { font-size: 13px; line-height: 1.3; }
+      .hero-img { margin: 5px; }
+      .hero-img img { width: 100%; }
+      .desc-card { font-size: 13px; line-height: 1.3; width: 100%; margin: 5px; padding: 10px; }
+      .urgency-box { width: 100%; margin: 5px; padding: 10px; }
+      .urgency-box h2 { font-size: 13px; line-height: 1.3; }
+      .cta-wrap { margin: 5px; }
+      .cta-btn { font-size: 16px; padding: 13px 20px; }
+      .footer-note { font-size: 9px; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-inner">
+
+      <div class="title-box">
+        <h1>
+          <a href="https://t.me/+7hR47jlUJ1s1ZjZl">STOP CHASING PIPS. START CATCHING THE 900PIPS RIDES WITH SOT 🎯</a>
+        </h1>
+      </div>
+
+      <div class="hero-img">
+        <img src="assets/sot.jpg" alt="School of Trade" width="1000" height="700">
+      </div>
+
+      <div class="desc-card">
+        <p>You Need an Execution Framework That Tells Why The Market is Moving.</p>
+        <p>
+          ✅ 150,000+ Active Members<br>
+          ✅ Daily Trade Ideas &amp; Market Updates<br>
+          ✅ Consistent Daily 200 – 500 pips<br>
+          ✅ Risk Management Tips<br>
+          ✅ 100% FREE Access
+        </p>
+      </div>
+
+      <div class="urgency-box">
+        <h2>🔥 Only 250 free seats remain for March intake. Don't start another month of almost making it 🔥</h2>
+      </div>
+
+      <div class="cta-wrap">
+        <a class="cta-btn" href="https://t.me/+7hR47jlUJ1s1ZjZl">
+          <svg aria-hidden="true" viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"></path></svg>
+          <span>LAST CALL HERE 👈</span>
+        </a>
+      </div>
+
+      <div class="divider">
+        <div class="divider-line">
+          <svg aria-hidden="true" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M471.1 96C405 96 353.3 137.3 320 174.6 286.7 137.3 235 96 168.9 96 75.8 96 0 167.8 0 256s75.8 160 168.9 160c66.1 0 117.8-41.3 151.1-78.6 33.3 37.3 85 78.6 151.1 78.6 93.1 0 168.9-71.8 168.9-160S564.2 96 471.1 96zM168.9 320c-40.2 0-72.9-28.7-72.9-64s32.7-64 72.9-64c38.2 0 73.4 36.1 94 64-20.4 27.6-55.9 64-94 64zm302.2 0c-38.2 0-73.4-36.1-94-64 20.4-27.6 55.9-64 94-64 40.2 0 72.9 28.7 72.9 64s-32.7 64-72.9 64z"></path></svg>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        <p>PLEASE NOTE: This site is not affiliated with Facebook or any Facebook entity. Once you leave Facebook, it's not their responsibility, it's our website's. We make every effort to clearly state and show all product proofs and use actual results.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="scroll-top" id="scrollTop" aria-label="Scroll to Top">
+    <svg class="ast-arrow-svg" xmlns="http://www.w3.org/2000/svg" width="26" height="16" viewBox="0 0 26 16"><path d="M12.5,3.193l12.5,12.5l-2.5,2.5l-10-10l-10,10L0,15.693L12.5,3.193z" fill="#fff"/></svg>
+  </div>
+
+  <script>
+    // Scroll to top button
+    var st = document.getElementById('scrollTop');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) st.classList.add('show');
+      else st.classList.remove('show');
+    });
+    st.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>

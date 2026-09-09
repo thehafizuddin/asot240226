@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/asot240226/", "destination": "/index.html" },
+    { "source": "/asot240226", "destination": "/index.html" }
+  ]
+}
